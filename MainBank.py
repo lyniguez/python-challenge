@@ -1,18 +1,7 @@
-
-# coding: utf-8
-
-# In[19]:
-
 import os
 import csv
 
-
-# In[20]:
-
 budgetCSV = os.path.join('PyBank','raw_data','budget_data_1.csv')
-
-
-# In[22]:
 
 totalmonths = 0
 totalrev= 0
@@ -22,7 +11,6 @@ maxdecreaserev = []
 maxdecreasedate = []
 prevrev = 0
 totalchange = 0
-
 
     
 with open(budgetCSV, "r") as budget:
@@ -52,8 +40,6 @@ with open(budgetCSV, "r") as budget:
     
 
 
-# In[23]:
-
 
 
 print("Financial Analysis")
@@ -64,9 +50,5 @@ print("Total Revenue: "+ str(totalrev))
 print("Greatest Increase in Revenue: "+ str(maxincreasedate)+ " "+str(maxincreaserev))
 print("Greatest Decrease in Revenue: "+ str(maxdecreasedate)+ " "+str(maxdecreaserev))
 print("Average Revenue Change "+ str(changerev))
-
-
-# In[ ]:
-
 
 
