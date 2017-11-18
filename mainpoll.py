@@ -17,7 +17,7 @@ percentcount = round((pollvotecount / totalvotes) * 100,1)
 pollgroup = polldataDF.groupby(["Candidate"]).count()
 
 #create new data
-pollsummary = pd.DataFrame({"% of Vote":percentcount,"Votes":pollvotes})
+pollsummary = pd.DataFrame({"% of Vote":percentcount,"Votes":pollvotecount})
 
 #sort and re-index dataframe
 winner = pollsummary.sort_values("Votes", ascending = False)
